@@ -8,13 +8,13 @@ setup
 you can check whether everything is okay by running 
 `minikube profile list `
 
-results:
+results:`
 |----------|-----------|---------|--------------|------|---------|---------|-------|--------|
 | Profile  | VM Driver | Runtime |      IP      | Port | Version | Status  | Nodes | Active |
 |----------|-----------|---------|--------------|------|---------|---------|-------|--------|
 | minikube | docker    | docker  | 192.168.49.2 | 8443 | v1.26.1 | Running |     1 | *      |
 |----------|-----------|---------|--------------|------|---------|---------|-------|--------|
-
+`
 
 use `minikube ssh ` to connect to your local cluster
 install kubectl inside the minikube
