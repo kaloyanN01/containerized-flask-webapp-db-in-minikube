@@ -1,42 +1,42 @@
 # minikube-docker-flask-mysql
 
-Flask/MySQL/Docker/Kubernetes
-setup
-1.install minikube
-2.start the minikube cluster with driver by your choosing, mine is docker
-`minikube start --driver=docker`
-you can check whether everything is okay by running 
+Minikube/Docker/Flask/MySQL  
+setup  
+1.install minikube  
+2.start the minikube cluster with driver by your choosing,  
+mine is docker  
+`minikube start --driver=docker`  
+you can check whether everything is okay by running   
 `minikube profile list `
 
-results:`
-|----------|-----------|---------|--------------|------|---------|---------|-------|--------|
-| Profile  | VM Driver | Runtime |      IP      | Port | Version | Status  | Nodes | Active |
-|----------|-----------|---------|--------------|------|---------|---------|-------|--------|
-| minikube | docker    | docker  | 192.168.49.2 | 8443 | v1.26.1 | Running |     1 | *      |
-|----------|-----------|---------|--------------|------|---------|---------|-------|--------|
-`
+results:
+| Profile  | VM Driver | Runtime | IP            | Port | Version  | Status   | Nodes | Active |
+|----------|-----------|---------|---------------|------|----------|----------|-------|--------|
+| minikube | docker    | docker  | 192.168.49.2  | 8443 | v1.26.1  | Running  | 1     | *      |
 
-use `minikube ssh ` to connect to your local cluster
+
+use `minikube ssh ` to connect to your local cluster  
+
 install kubectl inside the minikube
 
-`curl -LO https://dl.k8s.io/release/v1.27.0/bin/linux/amd64/kubectl
-sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
-chmod +x kubectl
-mkdir -p ~/.local/bin
-mv ./kubectl ~/.local/bin/kubectl
-echo $PATH
-export PATH=$PATH:~/.local/bin
-echo $PATH
+`curl -LO https://dl.k8s.io/release/v1.27.0/bin/linux/amd64/kubectl  
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl  
+chmod +x kubectl  
+mkdir -p ~/.local/bin  
+mv ./kubectl ~/.local/bin/kubectl  
+echo $PATH  
+export PATH=$PATH:\~/.local/bin  
+echo $PATH  
 
-sudo cp /etc/kubernetes/admin.conf /home/docker/config
-mkdir .kube
-mv config .kube/
-sudo chown $(id -u):$(id -g ) $HOME/.kube/config
+sudo cp /etc/kubernetes/admin.conf /home/docker/config  
+mkdir .kube  
+mv config .kube/  
+sudo chown $(id -u):$(id -g ) $HOME/.kube/config  
 
-kubectl version --client`
+kubectl version --client`  
 
 using the docker cp command copy the project files from the local machine to the minikube cluster
-example:
+example:  
 `docker cp /home/user/path/to/project
 minikube:/home/docker/project`
 
