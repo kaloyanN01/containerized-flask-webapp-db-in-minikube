@@ -1,0 +1,7 @@
+CREATE DATABASE IF NOT EXISTS votes;
+USE votes;
+
+CREATE TABLE IF NOT EXISTS animals (dogs INT DEFAULT 0, cats INT DEFAULT 0);
+INSERT INTO animals (dogs, cats) VALUES (0, 0);
+
+

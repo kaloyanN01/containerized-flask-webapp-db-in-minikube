@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Daily News</title>
+    <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='../static/mystyle.css')}}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/VoltaireFrangela.otf') }}" />
+</head>
+
+<body>
+    <div class="parent">
+        <div class="div1">
+            <hr class="hr">
+            <h1 id="newspaperTitle">DAILY NEWS</h1>
+            <h3 id="blackline">World - Business - Finance - Lifestyle - Travel - Sport - Weather</h3>
+            <h3 id="subtext">the worlds best selling national newspaper</h3>
+            <hr id="secondhr">
+            <div id="greyline">
+                <span id="leftgreyline">First Edition</span>
+                <span id="rightgreyline">15 APR 2023</span>
+            </div>
+        </div>
+        <div class="div2">
+            <div id="page"> 
+
+                <div id="leftpage">
+                    <h2 id="question1">Which one is better dogs or cats?
+                    </h2>
+                    <p>
+                    <h3 id="question2">It is the question of the century.</h3>
+                    </p><img src="/static/images/Dog-and-Cat-newspaper.jpg" id="theimage">
+                    <p>
+                    <h2 id="question3">Ready to find out the survey's results?
+                    </h2>
+                    </p>
+                    <p>
+                    <h3 id="shocking">It will be SHOCKING!</h3>
+                    </p>
+                </div>
+                <div id="rightpage">
+                    <h2 id="question1">Cast your vote NOW, down below</h2>
+                    <br><br>
+                    <form method="post" action="/">
+                        <input type="submit" value="dogs" name="action1" />
+                        <input type="submit" value="cats" name="action2" />
+                    </form> <br>
+                    <h2>The results are:</h2>
+                    {% block content %} {% endblock %}
+                </div>
+                <div id="centerpage">
+                    <h2 id="question1">Have the results of the poll angered you?<br><br>Do not worry, we care for your opinion about this meaningless poll. <br><br> Feel free to contact us at wereallydont@care.com</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="div3"> <h3 id="fakenewspaper">&copy;ThisIsDefinetlyNotaRealPaper</h3>
+            <h3 id="fakenewspaper">&trade;DAILYNEWS is powered by Flask and my personal hate for css</h3></div>
+        <div class="div4">
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

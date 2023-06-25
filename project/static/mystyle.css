@@ -1,0 +1,203 @@
+@font-face {
+    font-family: WatchQuinnRegular;
+    src: url('/static/fonts/WatchQuinnRegular.ttf');
+    font-weight: bold;
+}
+
+body { 
+    /* background-color: white; */
+    background: no-repeat url(/static/images/newspaper_background.png) 0 0;
+    background-color: #EBEBEB;
+    background-repeat: repeat;
+    font-family: WatchQuinnRegular;
+    color: black
+}
+
+.parent {
+    /* display: grid; */
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.div1 {
+    grid-area: 1 / 1 / 2 / 6;
+    text-align: center;
+}
+
+.div2 {
+    grid-area: 2 / 1 / 3 / 6;
+    /* border: 5px solid purple; */
+
+}
+
+.div3 {
+    grid-area: 3 / 1 / 4 / 6;
+    /* border: 5px solid black; */
+    padding-top: 5%;
+}
+
+.div4 {
+    grid-area: 4 / 1 / 5 / 6;
+}
+#newspaperTitle{
+    font-size:500%;
+    color: black;
+    /* border: 5px solid black; */
+    margin-top: 0%;
+    margin-bottom: 0%;
+    /* word-spacing: 100%; */
+    letter-spacing: .8rem;
+
+}
+#blackline{
+    background-color: black;
+    color: white;
+    font-weight: 800;
+    padding-top: 0.25%;
+    padding-bottom: 0.25%;
+    margin-left: 30%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    margin-right: 31%;
+    text-shadow: 0px 0px 0px white;
+    word-spacing: 60%;
+    letter-spacing: 1%;
+}
+
+#subtext{
+    font-weight: 800;
+    margin-top: 0.75%;
+    margin-bottom: 0.75%;
+}
+hr{
+    margin-left: 30%;
+    margin-right: 30%;
+}
+#secondhr{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+#greyline{
+    /* border: 5px solid black; */
+    background-color: grey;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex; 
+    justify-content: space-between;
+    padding: 0.25% 1% 0.25% 1%;
+}
+
+#leftgreyline{
+    text-align: left;
+}
+#rightgreyline{
+    text-align: right;
+}
+#thequestion{
+    border: 5px solid black;
+    margin-left: 10%;
+    margin-right: 10%
+
+}
+
+#page{
+    /* border: 5px solid red; */
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#leftpage{
+    text-align: left;
+    /* border: 5px solid black; */
+    max-width: 40%;
+
+}
+
+#rightpage{
+    /* border: 5px solid yellow; */
+    text-align: left;
+}
+#centerpage{
+    text-align: left;
+    max-width: 25%;
+    margin-left: 5%;
+}
+
+#theimage{
+    height: auto;
+    width: 50%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+#question1{
+    margin-top: 1%;
+    margin-bottom: 0%;
+    line-height: 100%;
+}
+
+#question2{
+    margin-top: 0%;
+    margin-bottom: 0%;
+    line-height: 1%;
+
+}
+
+#question3{
+    margin-top: 1%;
+    margin-bottom: 0%;
+    line-height: 100%;
+    text-align: left;
+}
+
+#question4{
+    margin-top: 0%;
+    margin-bottom: 0%;
+    line-height: 1%;
+    text-align: left;
+
+}
+
+/* CSS */
+input[type=submit]{
+    font-family: WatchQuinnRegular;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    cursor: pointer;
+    border: 2px solid;
+    padding: 0.25em 0.5em;
+    box-shadow: 1px 1px 0px;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    font-weight: 800;
+    margin-left: 2%;
+  }
+  
+  input[type=submit]:active {
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
+  }
+  
+  @media (min-width: 768px) {
+    input[type=submit]{
+      padding: 0.25em 0.75em;
+    }
+  }
+
+#shocking{
+    text-align: right;
+    padding-right: 5%;
+}
+#fakenewspaper{
+    text-align: right;
+}

@@ -1,0 +1,43 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: flask-banan-service
+  labels:
+    app: web
+spec:
+  type: NodePort
+  selector:
+    app: flask-banan
+  ports:
+    - name: http
+      port: 5000
+      targetPort: 5000
+      nodePort: 30945
+  externalTrafficPolicy: Cluster
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: flask-banan
+  labels:
+    app: flask-banan
+spec:
+  containers:
+  - name: flask-banan
+    image: flaski:latest
+    imagePullPolicy: Never
+    ports:
+      - containerPort: 5000
+    env:
+      - name: FLASK_APP
+        value: app.py
+      - name: MYSQL_DATABASE
+        value: votes
+      - name: MYSQL_USER
+        value: root
+      - name: MYSQL_PASSWORD
+        value: password
+      - name: MYSQL_HOST
+        value: mysql
+      - name: DATABASE_URI
+        value: mysql://root:password@mysql/votes
